@@ -5,7 +5,7 @@ A simple integration of [Gentelella Alela!](https://colorlib.com/polygon/gentele
 This bundle automatically defines a default configuration for sonata admin, so the installation is as simple as :
 
 ```
-composer require sherlockode/sonata-gentelella-bundle
+composer require exploitit/sonata-gentelella-bundle
 ```
 
 and in the `app/AppKernel.php` :
@@ -15,7 +15,7 @@ public function registerBundles()
 {
     $bundles = [
         ...
-        new Sherlockode\SonataGentelellaBundle\SherlockodeSonataGentelellaBundle(),
+        new ExploitIt\SonataGentelellaBundle\ExploitItSonataGentelellaBundle(),
     ];
 }
 
@@ -29,7 +29,7 @@ sonata_admin:
 ```
 You need to extend the standard_layout.html.twig. If you do not have it, create one and edit it like this : 
 ```
-{% extends '@SherlockodeSonataGentelella/standard_layout.html.twig' %}
+{% extends '@ExploitItSonataGentelella/standard_layout.html.twig' %}
 ```
 
 **Most of the templates blocks are unchanged, but for the theme, we have been forced to move somes of them. So if you've overridden the sonata templates, there could be some glitches**
@@ -37,7 +37,7 @@ You need to extend the standard_layout.html.twig. If you do not have it, create 
 
 All plugins are disable by default, to enable plugins, in the config.yml : 
  ```
- sherlockode_sonata_gentelella:
+ exploitit_sonata_gentelella:
      fast_click: true
      nprogress: true
      chart: true
@@ -76,6 +76,6 @@ All plugins are disable by default, to enable plugins, in the config.yml :
  
   To see the demo (need all plugins) 
   ```
-  sherlockode_sonata_gentelella:
+  exploitit_sonata_gentelella:
       demo: true
   ```

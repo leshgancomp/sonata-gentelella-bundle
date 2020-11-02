@@ -18,14 +18,14 @@
               {% block sonata_form_attributes %}{% endblock %}
               >
 
-            {{ include('@SherlockodeSonataGentelella/Helper/render_form_dismissable_errors.html.twig') }}
+            {{ include('@ExploitItSonataGentelella/Helper/render_form_dismissable_errors.html.twig') }}
 
             {% block sonata_pre_fieldsets %}
                 <div class="row">
             {% endblock %}
 
             {% block sonata_tab_content %}
-                {% import "@SherlockodeSonataGentelella/CRUD/base_edit_form_macro.html.twig" as form_helper %}
+                {% import "@ExploitItSonataGentelella/CRUD/base_edit_form_macro.html.twig" as form_helper %}
                 {% set has_tab = ((admin.formtabs|length == 1 and admin.formtabs|keys[0] != 'default') or admin.formtabs|length > 1 ) %}
 
                 <div class="col-md-12">

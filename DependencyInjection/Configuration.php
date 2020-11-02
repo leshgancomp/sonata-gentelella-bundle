@@ -1,6 +1,6 @@
 <?php
 
-namespace Sherlockode\SonataGentelellaBundle\DependencyInjection;
+namespace ExploitIt\SonataGentelellaBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('sherlockode_sonata_gentelella');
+        $rootNode = $treeBuilder->root('exploitit_sonata_gentelella');
 
         $rootNode
             ->children()

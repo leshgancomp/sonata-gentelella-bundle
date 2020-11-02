@@ -5,12 +5,12 @@
     "type": "symfony-bundle",
     "authors": [
         {
-            "name": "Sherlockode",
-            "email": "contact@sherlockode.fr"
+            "name": "Leshgancomp",
+            "email": "web@wxploit-it.ru"
         }
     ],
     "autoload": {
-        "psr-4": { "Sherlockode\\SonataGentelellaBundle\\": "" }
+        "psr-4": { "ExploitIt\\SonataGentelellaBundle\\": "" }
     },
     "require": {
         "sonata-project/admin-bundle": "^3.14"
