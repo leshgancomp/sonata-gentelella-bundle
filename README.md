@@ -37,7 +37,7 @@ You need to extend the standard_layout.html.twig. If you do not have it, create 
 
 All plugins are disable by default, to enable plugins, in the config.yml : 
  ```
- exploitit_sonata_gentelella:
+ exploit_it_sonata_gentelella:
      fast_click: true
      nprogress: true
      chart: true
@@ -70,7 +70,6 @@ All plugins are disable by default, to enable plugins, in the config.yml :
      morris: true
      animate: true
      easy_pie_chart: true
-     echarts: true
      datatables: true
  ```
  
