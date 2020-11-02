@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% block linkElement %}
-    {% spaceless %}
+    {% apply spaceless %}
         {% set translation_domain = item.extra('label_catalogue', 'messages') %}
         {% if item.extra('on_top') is defined and not item.extra('on_top') %}
             {% set icon = item.extra('icon')|default('') %}
@@ -33,11 +33,11 @@
         {% endif %}
         {% set is_link = true %}
         {{ parent() }}
-    {% endspaceless %}
+    {% endapply %}
 {% endblock %}
 
 {% block spanElement %}
-    {% spaceless %}
+    {% apply spaceless %}
         <a href="#">
             {% set translation_domain = item.extra('label_catalogue') %}
             {% set icon = item.extra('icon')|default('') %}
@@ -47,7 +47,7 @@
                 <span class="pull-right-container"><i class="fa pull-right fa-angle-left"></i></span>
             {%- endif -%}
         </a>
-    {% endspaceless %}
+    {% endapply %}
 {% endblock %}
 
 {% block label %}{% if is_link is defined and is_link %}{{ icon|default|raw }}{% endif %}{% if options.allow_safe_labels and item.extra('safe_label', false) %}{{ item.label|raw }}{% else %}{{ item.label|trans({}, translation_domain|default('messages')) }}{% endif %}{% endblock %}

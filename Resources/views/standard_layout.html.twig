@@ -109,7 +109,7 @@ file that was distributed with this source code.
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
                             {% block logo %}
-                            {% spaceless %}
+                            {% apply spaceless %}
                                 <a class="site_title" href="{{ path('sonata_admin_dashboard') }}">
                                 {% if 'single_image' == sonata_admin.adminPool.getOption('title_mode') or 'both' == sonata_admin.adminPool.getOption('title_mode') %}
                                     <img src="{{ asset(sonata_admin.adminPool.titlelogo) }}" alt="{{ sonata_admin.adminPool.title }}">
@@ -118,7 +118,7 @@ file that was distributed with this source code.
                                     <span>{{ sonata_admin.adminPool.title }}</span>
                                 {% endif %}
                                 </a>
-                            {% endspaceless %}
+                            {% endapply %}
                             {% endblock %}
                         </div>
 
