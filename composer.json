@@ -1,5 +1,5 @@
 {
-    "name": "leshgancomp/sonata-gentelella-bundle",
+    "name": "exploitit/sonata-gentelella-bundle",
     "description": "Symfony SonataAdminBundle themed with Gentelella",
     "license": "MIT",
     "type": "symfony-bundle",
