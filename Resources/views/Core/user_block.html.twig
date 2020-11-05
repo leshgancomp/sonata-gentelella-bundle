@@ -12,7 +12,7 @@ file that was distributed with this source code.
 {% block user_block %}
     {% if app.user %}
         {% set _bg_class          = "bg-light-blue" %}
-        {% set _logout_uri        = url('sonata_user_admin_security_logout') %}
+        {% set _logout_uri        = url('fos_user_security_logout') %}
         {% set _logout_text       = 'user_block_logout'|trans({}, 'SonataUserBundle') %}
         {% set _profile_uri       = sonata_user.userAdmin.isGranted('EDIT', app.user) ? sonata_user.userAdmin.generateUrl('edit', {id: app.user.id}) : sonata_user.userAdmin.generateUrl('show', {id: app.user.id}) %}
         {% set _profile_text      = 'user_block_profile'|trans({}, 'SonataUserBundle') %}
@@ -39,16 +39,6 @@ file that was distributed with this source code.
 
         </li>
 #}
-
-        <li class="block-li">
-            <span class="badge {{ _bg_class }}">
-                {% if _user_image %}
-                    <img src="{{ _user_image }}" class="img-circle" alt="Avatar" />
-                {% endif %}
-            </span> 
-            {{ 'Signed in as'|trans }} <p><b>{{ app.user }}</b></p>
-        </li>
-        <li role="separator" class="divider"></li>
         <li><a href="{{ _profile_uri }}">{{ _profile_text }}</a></li>
         <li><a href="{{ _logout_uri }}">{{ _logout_text }}</a></li>
             
