@@ -13,8 +13,13 @@ file that was distributed with this source code.
 
 {% block field %}
     <div class="btn-group">
-        {% for actions in field_description.options.actions %}
-            {% include actions.template %}
-        {% endfor %}
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ 'Action'|trans }} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            {% for actions in field_description.options.actions %}
+                <li>{% include actions.template %}</li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}
