@@ -12,7 +12,7 @@ file that was distributed with this source code.
     {{ dump(object) }}
     <div class="btn-group">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Action <span class="caret"></span>
+          {{ 'Actions'|trans }} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
             {% for item in admin.getActionButtons(action, object|default(null)) %}
